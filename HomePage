@@ -1,1 +1,43 @@
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link rel="stylesheet" href="sdrogocss.css" />
+
+<style>  
+
+body {
+  background-color: aliceblue;
+}
+
+</style>
+
+</head>
+
+<script>
+  (function () {
+    var noop = function noop() {};
+    if ("performance" in window === false) {
+      window.performance = {};
+    }
+    window.performance.mark = performance.mark || noop;
+    window.performance.measure = performance.measure || noop;
+    if ("now" in window.performance === false) {
+      var nowOffset = Date.now();
+      if (performance.timing && performance.timing.navigationStart) {
+        nowOffset = performance.timing.navigationStart;
+      }
+      window.performance.now = function now() {
+        return Date.now() - nowOffset;
+      };
+    }
+  })();
+  </script>
+</body>
